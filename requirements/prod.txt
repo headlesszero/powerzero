@@ -1,0 +1,4 @@
+git+https://github.com/headlesszero/hz_bootstrap.git@main#egg=hz_bootstrap
+
+
+-r common.txt  # Include all common dependencies
