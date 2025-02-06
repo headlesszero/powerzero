@@ -1,0 +1,15 @@
+
+#
+# Required for PAM SOUND
+#
+
+pydub
+simpleaudio
+
+#
+# Required for OLED screen
+#
+
+adafruit-blinka
+luma.oled
+pillow

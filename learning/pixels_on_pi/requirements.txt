@@ -1,0 +1,8 @@
+# sudo pip install -r requirements.txt
+
+
+adafruit-blinka
+adafruit-circuitpython-ssd1306
+luma.oled
+pillow
+spidev
