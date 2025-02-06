@@ -10,7 +10,7 @@ import argparse
 
 # Dynamically resolve the project root and virtual environment path
 PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-VENV_PYTHON = os.path.join(PROJECT_ROOT, "venv", "bin", "python")
+VENV_PYTHON = os.path.join(PROJECT_ROOT, ".venv", "bin", "python")
 
 # Check if the script is using the correct Python interpreter
 if sys.executable != VENV_PYTHON:
