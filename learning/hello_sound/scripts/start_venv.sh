@@ -15,7 +15,10 @@ fi
 # Check if the venv exists
 if [ -d "$VENV_DIR" ]; then
     echo "Activating virtual environment..."
-    
+    echo ""
+    echo "Example: sudo venv/bin/python max_sound_sa.py"
+    echo ""
+
     # Source the venv in the current shell
     exec bash --rcfile <(echo "source $VENV_DIR/bin/activate; exec bash")
 else

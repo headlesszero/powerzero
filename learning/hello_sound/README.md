@@ -34,7 +34,21 @@ sudo scripts/start_venv.sh
 **sudo resets environment variables**, so you must explicitly specify the venv **Python interpreter** when executing scripts.
 
 ```bash
-sudo ./venv/bin/python ./max_sound.py
+sudo ./venv/bin/python ./max_sound_sa.py
 ```
+
+
+# Important Notes
+When trying on different Pi OS's, I was having inconsistent results with using simpleaudio (sa).  This was also causing problems with the i2s configuration, so I updated (hz_bootstrap) spi component to use hifiberry-dac for the max98357a as this seems to be more consistent across platforms.
+
+There are now two different files:
+`max_sound_sa.py` using Simple Audio
+`max_sound_aplay.py` that uses the aplay command in the OS
+
+
+**KEY DIFFERENCES:**
+- Using the hifiberry-dac means that APLAY needs use STEREO not MONO and the convert function handles that. (it will still output mono, but requires a stereo source)
+
+
 
 
