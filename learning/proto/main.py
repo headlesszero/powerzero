@@ -4,12 +4,17 @@ import time
 from modules.sound import PAMSound
 from modules.oled  import OLED
 
+GPIO_LED    = 26
+GPIO_BUTTON = 4
+
+
+
 # Turn on the status led immediately on startup
-status_led = gpiozero.LED(27)
+status_led = gpiozero.LED(GPIO_LED)
 status_led.on()
 
 # Get our button ready
-button = gpiozero.Button(17, pull_up = True)
+button = gpiozero.Button(GPIO_BUTTON, pull_up = True)
 
 # Start the display
 oled = OLED()

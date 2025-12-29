@@ -8,7 +8,7 @@ VENV_DIR="venv"
 REQ_FILE="requirements.txt"
 
 # Required system dependencies (space-separated list)
-DEPS="python3-dev python3-pip"
+DEPS="python3-dev python3-pip i2c-tools"
 
 # Ensure the script is run from the correct directory
 if [ "$(basename "$(pwd)")" != "pixels_on_pi" ]; then

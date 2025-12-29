@@ -8,7 +8,7 @@ VENV_DIR="venv"
 REQ_FILE="requirements.txt"
 
 # Required system dependencies (space-separated list)
-DEPS="python3-dev python3-pip libasound2-dev ffmpeg sox"
+DEPS="python3-dev python3-pip i2c-tools libasound2-dev ffmpeg sox"
 
 # Ensure the script is run from the correct directory
 if [ "$(basename "$(pwd)")" != "proto" ]; then

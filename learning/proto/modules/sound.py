@@ -43,15 +43,17 @@ class PAMSound:
     def _convert_mp3(self, mp3_path: str, volume_change: int = 0) -> str:
         """ Converts MP3 to WAV, ensuring mono and consistent sample rate. """
         
+        NUM_CHANNELS = 2
+
         self.display.print(f"Load: {mp3_path.rsplit('/', 1)[-1]}")
-        wav_path = os.path.splitext(mp3_path)[0] + f"_m{abs(volume_change):03}.wav"
+        wav_path = os.path.splitext(mp3_path)[0] + f"_m{abs(volume_change):03}_{NUM_CHANNELS}.wav"
 
         if os.path.exists(wav_path):
             return wav_path  # Use existing converted file
 
 
         sound = AudioSegment.from_mp3(mp3_path)
-        sound = sound.set_channels(1) 
+        sound = sound.set_channels(NUM_CHANNELS) 
         sound = sound.set_frame_rate(self.SAMPLE_RATE)
 
         if volume_change != 0:
